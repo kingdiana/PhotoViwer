@@ -1,6 +1,7 @@
 package com.example.diana.instagramclient;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,9 +25,9 @@ public class InstagramPhotosAdapter extends ArrayAdapter<InstagramPhoto> {
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_photo, parent, false);
         }
-        TextView tvcaption = (TextView) convertView.findViewById(R.id.tvCaption);
+        TextView tvCaption = (TextView) convertView.findViewById(R.id.tvCaption);
         ImageView ivPhoto = (ImageView) convertView.findViewById(R.id.ivPhoto);
-        tvcaption.setText(photo.caption);
+        tvCaption.setText(Html.fromHtml("<b>" + photo.username + " -- </b>" + photo.caption));
         ivPhoto.setImageResource(0);
         Picasso.with(getContext()).load(photo.imageUrl).into(ivPhoto);
         return convertView;

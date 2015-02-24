@@ -6,7 +6,7 @@ Stories completed:
 		Graphic, Caption, Username
 
 Walk through:
-
+![alt tag](https://github.com/kingdiana/PhotoViwer/blob/master/demo.gif)
 
 To install:
 
